@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smart Farm</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <div class="welcome">WELCOME TO MY SMART FARM</div>
+        <div id = "header">
+
+        </div>
+
+        <div class="grid-container">
+            <div class="pump">
+                <img class="pump_img" src="./image/pump.png" alt="Card imgge" style="width: 70px">
+                <span id="sub_pump">
+                    Đang xác định...
+                </span>
+            </div>
+            <div class="thief">
+                <img class="img_thief" src="./image/thief.png" alt="Card imgge" style="width: 100px">  
+                <span id="warn">Đang xác định ...</span> 
+            </div>
+            <div class="light">
+                Đèn bên ngoài chuồng
+                <div>
+                    <img id="img_light" src="./image/led_off.png" alt="Card imgge" style="width: 110px">
+                </div>
+            </div>  
+            <div class="light_control">
+                Cường độ sáng (lux)
+                <span id="sub_light_control">00</span> <!--<h2>°C</h2> -->
+            </div>
+            <div class="tem">
+                Nhiệt độ
+                <div>
+                    <img class="img_tem" src="./image/tem.png" alt="Card imgge" style="width: 30px">
+                </div>
+                <span id="sub_tem">00</span> <!--<h2>°C</h2> -->
+            </div>
+            <div class="hum">
+                Độ ẩm
+                <div>
+                    <img class="img_hum" src="./image/hum.png" alt="Card imgge" style="width: 30px">
+                </div>
+                <span id="sub_hum">00<h2>%</h2></span>
+            </div>
+        </div>
+
+        <div class = "controler">
+            <h2>Điều khiển thiết bị</h2>
+            <div class="control_container">
+                <div class="pump_control">
+                    <h3>Máy bơm</h3>
+                    <div class="toggle-switch">
+                        <input class="toggle-input" id="toggle" type="checkbox" onclick="isChecked()">
+                        <label class="toggle-label" for="toggle"></label>
+                      </div>
+                </div>
+
+                <div class="feed_control">
+                    <h3>Cân khối lượng thức ăn</h3>
+                    <input type="number" name="number" id="feed_input" placeholder="Nhập khối lượng....">
+                    <input type="submit" id="feed_submit" value="OK" onclick="feed_onClick()">
+                </div>
+
+                <div class="indensity_control">
+                    <h3>Ánh sáng</h3>
+                    <input type="number" name="number" id="light_input" placeholder="Lum....">
+                    <input type="submit" id="light_submit" value="OK" onclick="light_onClick()">
+                </div>
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+        <script src="control.js"></script>
+    </body>
+</html>
